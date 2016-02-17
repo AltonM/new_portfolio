@@ -1,0 +1,536 @@
+body{
+	padding:0px;
+	margin:0px;
+	font-family:"Verdana";
+}
+
+.clear{
+	clear:both;
+	height:0px;
+	width:0px;
+}
+
+#body{
+	bottom: 0;
+	left: 0;
+	margin: 1px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	/*background-color:#eeeeee;
+	border: 1px solid lightgrey;
+	*/
+}
+a{
+	color:inherit;
+	text-decoration:none;
+}
+
+#body #navigation{
+	/*
+	background-color:/*#CCCCCC*#E0E0E0;
+	border-bottom:solid 1px #B8B8B8;
+	padding: 0 80px;
+	*/
+	background-color: white;
+	border-right: 1px solid lightgrey;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 95px;
+	margin-left:-98px;
+}
+
+
+#body #navigation #logo{
+	background-color: rgb(10, 183, 234);
+	background-image: url("images.jpg");
+	background-position: 3px 4px;
+	background-repeat: no-repeat;
+	background-size: 292px auto;
+	height: 76px;
+	width: 96px;
+	z-index: 3;
+}
+
+#body #navigation #logo +div{
+	background-color: black;
+	box-shadow: 0 0 24px black;
+	height: 42px;
+	position: absolute;
+	top: 78px;
+	width: 140px;
+	z-index: 0;
+	display:none;
+}
+
+#body #navigation > .nav-opts{
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 75px;
+}
+
+#body #navigation > .nav-opts > .nav-item{
+	/*border-right: 1px solid lightgray;*/
+	border-top: 1px solid lightgrey;
+	color: #8f8f8f;
+	cursor: pointer;
+	font-size: 11px;
+	padding: 15px 5px;
+	position: relative;
+	text-transform: uppercase;
+}
+
+#body #navigation > .nav-opts > .nav-item.ham{
+	font-size: 29px;
+	padding: 5px;
+	text-align: center;
+}
+
+#body #navigation > .nav-opts > .nav-item:hover,#body #navigation > .nav-opts > .nav-item.active{
+	background-color:#ECECEC
+}
+
+#body #navigation > .nav-opts > div:last-of-type{
+	border-bottom: 1px solid lightgrey;
+}
+
+#body .body {
+	background-color: #eeeeee;
+	border: 1px solid lightgrey;
+	bottom: 0;
+	left: 0;
+	margin-left: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+	
+}
+
+#body >.ham{
+	background-color: black;
+	border: 1px solid white;
+	color: white;
+	font-size: 29px;
+	left: -2px;
+	padding: 5px;
+	position: absolute;
+	text-align: center;
+	top: 75px;
+	width: 40px;
+	margin-left:-2px;
+	cursor:pointer;
+	/*opacity:.7;*/
+	opacity:1;
+	z-index:5;
+}
+
+.body >.ham:hover{
+	opacity:1;
+}
+
+#body .body > .carousel{
+	padding:10px;
+	/*border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;*/
+}
+
+#body .body > .carousel .slide{
+	width:100%;
+	height:100%;
+	background-size:cover;
+	background-position:center;
+}
+
+#body .body > .carousel > #image_holder:not(.contact){
+	/*max-width:1200px;
+	margin:auto;*/
+	margin:0 40px;
+}
+
+#body .body > .carousel > #image_holder.contact{
+	bottom: 0;
+	left: 0;
+	padding: 30px 50px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index:2;
+	display:none;
+	opacity:0;
+}
+
+#body .body > .carousel > #image_holder.contact > .cover{
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background-color:black;
+	opacity:.9;
+	z-index:1;
+}
+
+#body .body > .carousel > #image_holder > div.image{
+	float:left;
+	width:25%;
+	min-width:300px;
+	height:260px;
+	position:relative;
+	opacity:0;
+}
+
+#body .body > .carousel > #image_holder > div.image > div > div{
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-position: center center;
+	border-color:#6E6E6E;
+	border-width:1px;
+	border-style:none;
+	position:relative;
+	cursor:pointer;
+}
+
+div[data-image]{
+	display:none;
+}
+
+#body .body > .carousel > #image_holder > div.image > div {
+	position:absolute;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	left:0px;
+}
+
+#body .body > .carousel > #image_holder .ptitle > div{
+	padding:50px 0px;
+	text-transform:uppercase;
+}
+
+#body .body > .carousel > #image_holder > div.image > div > .cover{
+	position:absolute;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	top:0px;
+	background-color:black;
+	z-index:2;
+	text-align:center;
+}
+
+#body .body > .carousel > #image_holder > div.image > div > .cover > div{
+	color: white;
+	display: inline-block;
+	font-family: Arial;
+	font-size: 14px;
+	padding: 5px 0px;
+	text-align: center;
+	display:none;
+}
+
+#body .body > .carousel > #image_holder > div.image > div > .cover  > div:first-of-type{
+	margin-top: 30%;
+	border-bottom: 1px solid white;
+}
+
+#body .body > .carousel > #image_holder > div.image:hover > div > .cover{
+	opacity:.9 !important;
+	transition: opacity 1s;
+}
+
+#body .body > .carousel > #image_holder > div.image:hover > div > .cover > div{
+	display:inline-block;
+}
+
+#body .body > .carousel > #image_holder.contact > .about,#body .body > .carousel > #image_holder.contact >.contact{
+	display:none;
+}
+
+#body .body > .carousel > #image_holder.contact > .about,#body .body > .carousel > #image_holder.contact  >.contact{
+	background-color: white;
+	margin: auto;
+	max-width: 1200px;
+	padding: 70px 12px;
+	position: relative;
+	z-index:2;
+	opacity:0;
+}
+
+#body .body > .carousel > #image_holder.contact .about > .about > div:not(.clear):not(.skills){
+	font-size:14px;
+	float:left;
+	max-width:50%;
+	padding:10px;
+}
+
+#body .body > .carousel > #image_holder.contact .about > .about > div.skills{
+	text-align:center;max-width:700px;
+	margin:auto;
+}
+
+#body .body > .carousel > #image_holder.contact .about > .about > div.skills .skill{
+	font-size:18px;
+	float:left;
+	width:50%;
+	max-width:50%;
+	margin-bottom:20px;
+}
+
+#body .body > .carousel > #image_holder.contact .about > .about > div.skills .skill > div:not(.clear){
+	float:right;
+	padding:0px 20px;
+}
+
+#body .body > .carousel > #image_holder.contact .about > .about > div.skills .skill > div .c{
+	padding:0px 10px;
+}
+
+#body .body > .carousel > #image_holder.contact .about > .about > div.skills .skill.right > div:not(.clear){
+	float:left;
+}
+
+#body .body > .carousel > #image_holder.contact .about > .about > div.skills .skill > div:first-of-type+div{
+	position:relative; 
+	width:70px;
+	border:solid 1px white;
+	height:15px;
+	border-radius:10px;
+	overflow:hidden;
+}
+
+#body .body > .carousel > #image_holder.contact .about > .about > div.skills .skill > div:first-of-type+div >div{
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	top:0px;
+	width:0%;
+	background-color:rgb(10, 183, 234);
+}
+
+#body .body > .carousel > #image_holder.contact .about > .about > div.skills .skill > div:last-of-type{
+	font-size:12px;
+	float:none;
+}
+
+#body .body > .carousel > #image_holder.contact .about > .about > div.skills .skill.left{
+	text-align:right;
+}
+
+#body .body > .carousel > #image_holder.contact .about > .about > div.skills .skill.left > div:first-of-type+div{
+	margin-right:20px;
+}
+
+#body .body > .carousel > #image_holder.contact .about > .about > div.skills .skill.right > div:first-of-type+div{
+	margin-left:20px;
+}
+
+#body .body > .carousel > #image_holder.contact .about > .about > div.skills .skill.right{
+	text-align:left;
+}
+
+#body .body > .carousel > #image_holder.contact .about > .about > div > div{
+	font-size: 30px;
+	text-transform: uppercase;
+	color:lightgrey;
+}
+
+#body .body > .carousel > #image_holder.contact .about > .about > div > div > span{
+	color:rgb(10, 183, 234);
+}
+
+#body .body > .carousel > #image_holder .contact  #contact_form{
+	max-width:600px;
+	margin:auto;
+}
+
+#body .body > .carousel > #image_holder .contact  #contact_form > div.input{
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+
+#body .body > .carousel > #image_holder .contact  #contact_form > div.input > input{
+	border: medium none;
+	padding: 11px 5px;
+	width: 100%;
+	font-size:16px;
+}
+
+#body .body > .carousel > #image_holder .contact  #contact_form > textarea{
+	width: 100%;
+	height:250px;
+	border:none;
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	padding: 11px 5px;
+	box-sizing: border-box;
+	font-family:arial;
+}
+
+#body .body > .carousel > #image_holder .contact  #contact_form .submit{
+	text-align:right;
+	margin-top:10px;
+	cursor:pointer;
+	opacity:.5;
+}
+
+#body .body > .carousel > #image_holder .contact  #contact_form .submit > div > div:first-of-type{
+	padding:10px 15px;
+	color:white;
+	background-color:#0066FF;
+	display:inline-block;
+	margin-right: -6px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+	border-bottom:solid 2px #0066FF;
+}
+
+#body .body > .carousel > #image_holder .contact  #contact_form .submit > div > div:last-of-type{
+	padding:10px 15px;
+	color:white;
+	background-color:#3399FF;
+	display:inline-block;
+	border-top-right-radius:3px;
+	border-bottom-right-radius:3px;
+	border-bottom:solid 2px #3399FF;
+}
+
+#body .body > .carousel > #image_holder .contact  #contact_form .submit > div > div:first-of-type{
+	border-bottom:solid 2px #0052CC;
+}
+
+#body .body > .carousel > #image_holder .contact  #contact_form .submit > div > div:last-of-type{
+	border-bottom:solid 2px #007AF4;
+}
+
+#body .body > .carousel > #image_holder #image_over{
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 100%;
+	z-index: 99;
+	background-color: white;
+	overflow:hidden;
+}
+
+#body .body > .carousel > #image_holder #image_over .closer{
+	background-color: black;
+	font-size: 30px;
+	height: 40px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 40px;
+	text-align: center;
+	color: white;
+	border-radius: 50%;
+	/*opacity: .5;*/
+	cursor:pointer;
+	border:solid 1px white;
+	z-index:99;
+}
+
+#body .body > .carousel > #image_holder #image_over >.controls{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	display:none;
+}
+
+#body .body > .carousel > #image_holder #image_over >.controls #info{
+	background-color: #f5f5f5;
+	border: 1px solid #cccccc;
+	bottom: 0;
+	left: 0;
+	padding: 10px 20px;
+	position: absolute;
+	right: 0;
+}
+
+#body .body > .carousel > #image_holder #image_over >.controls #info > div{
+	float:left;
+	width:33%;
+	font-size:11px;
+}
+
+#body .body > .carousel > #image_holder #image_over > .controls > .arrow{
+	font-size: 70px;
+	position: absolute;
+	top: 45%;
+	cursor:pointer;
+}
+
+#body .body > .carousel > #image_holder #image_over > .controls > .arrow.left{
+		left: 0;
+}
+
+#body .body > .carousel > #image_holder #image_over > .controls > .arrow.right{
+		right: 0;
+}
+	
+#body .body > .carousel > #image_holder #image_over >.image{
+	overflow:hidden;
+	height:100%;
+}
+
+#body .body > .carousel > #image_holder #image_over >.image  > div{
+	height:100%;
+}
+
+#body .body > .carousel > #image_holder #image_over >.image > div > div{
+	height:100%;
+	float:left;
+	text-align:center;
+}
+
+#body .body > .carousel > #image_holder #image_over >.image > div > div > div{
+	/*margin:20px 30px 60px;*/
+}
+
+#body .body > .carousel > #image_holder #image_over >.image > div > div > div > img{
+	max-width:100%;
+	max-height:100%;
+}
+
+/**
+	***For live preview page
+**/
+
+
+.project{
+	float:left;
+	width:20%;
+	height:200px;
+	position:relative;
+}
+
+.project > a >div{
+	background-color:lightgrey;
+	border:solid 1px black;
+	position:absolute;
+	left:5px;
+	top:5px;
+	bottom:5px;
+	right:5px;
+}
+
+.project > a > div > div{
+	position:absolute;
+	top:45%;
+	color:grey;
+	width:100%;
+	text-align:center;
+}
+
+
