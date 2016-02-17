@@ -1,0 +1,36 @@
+RewriteEngine On
+#RewriteBase /
+# CUSTOM 404 ERROR			
+ErrorDocument 404 	/filenotfound.php	
+
+# HIDE FILES TO USERS
+IndexIgnore *
+
+#NOT FOLDER
+#RewriteCond %{REQUEST_FILENAME} !-d
+#NOT FILE
+RewriteCond %{REQUEST_FILENAME} !-f
+#JUST NOT
+#RewriteCond %{REQUEST_FILENAME} !-l
+
+#RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+# NC makes the rule none case sensative
+# L makes this the last rule that this specific condition will match.
+
+
+#RewriteRule ^home/([^/]+)/?$ 					index.php?page=home [L,QSA]
+RewriteRule ^home/?$ 							index.php?page=home [L,QSA]
+RewriteRule ^about/?$ 							index.php?page=about [L,QSA]
+RewriteRule ^portfolio/?$ 						index.php?page=works [L,QSA]
+RewriteRule ^contact/?$ 						index.php?page=contact [L,QSA]
+RewriteRule ^live-preview/?$ 					index.php?page=live-preview [L,QSA]
+RewriteRule ^live-preview/([^/]+)/?$ 			index.php?page=live-preview&work=$1 [L,QSA]
+
+#CSS
+RewriteRule ^style.css$ 						css/style-css.php [L,QSA]
+
+#JAVASCRIPT
+RewriteRule ^script.js$ 						js/script.php [L,QSA]
+
+#LOGO
+RewriteRule ^images.jpg$ 						images/sprite.png [L,QSA]
